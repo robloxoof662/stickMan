@@ -6,6 +6,10 @@ import { installViewportGuards } from "./ui/ViewportGuards.ts";
 
 installViewportGuards();
 
+const devBadge = import.meta.env.DEV
+  ? `<div class="dev-badge" aria-label="开发状态">iPad 防缩放已开启 · 热更新已连接</div>`
+  : "";
+
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <main class="game-shell">
     <div id="scene" class="scene" aria-label="StickMan 对战场景"></div>
@@ -30,6 +34,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     </button>
     <div class="desktop-hint">WASD 移动 · 空格攻击</div>
     <div class="rotate-notice">请将 iPad 横过来进行对战</div>
+    ${devBadge}
   </main>
 `;
 

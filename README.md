@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-电脑浏览器打开 `http://localhost:5173`。Vite 开发服务器会自动热更新；保存前端代码后，电脑浏览器和同一 Wi-Fi 下的 iPad Safari 都会刷新/替换页面内容。
+电脑浏览器打开 `http://localhost:5173`。Vite 开发服务器会自动热更新；保存前端代码后，电脑浏览器和同一 Wi-Fi 下的 iPad Safari 都会刷新/替换页面内容。开发模式右下角会显示“iPad 防缩放已开启 · 热更新已连接”，用来确认浏览器加载的是新代码。
 
 在同一 Wi-Fi 下用 iPad 测试：
 

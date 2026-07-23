@@ -260,6 +260,23 @@ body {
   pointer-events: none;
 }
 
+.dev-badge {
+  position: absolute;
+  z-index: 4;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(14px, env(safe-area-inset-bottom));
+  padding: 7px 10px;
+  border: 1px solid rgb(94 234 212 / 28%);
+  border-radius: 999px;
+  background: rgb(2 6 23 / 54%);
+  backdrop-filter: blur(10px);
+  color: #99f6e4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
 .rotate-notice {
   display: none;
 }
