@@ -48,6 +48,9 @@ const client = new GameClient({
   onConnectionChange(status) {
     connectionElement.textContent = status.label;
     connectionElement.dataset.state = status.state;
+    messageElement.textContent = status.state === "preview"
+      ? "单机预览：移动并试试攻击"
+      : "等待另一位玩家加入";
   },
   onSnapshot(myId, players) {
     arena.applySnapshot(myId, players);
