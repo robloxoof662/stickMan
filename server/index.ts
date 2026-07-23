@@ -21,7 +21,7 @@ const httpServer = createServer((request, response) => {
   }
 });
 
-const webSocketServer = new WebSocketServer({ server: httpServer, path: "/ws" });
+const webSocketServer = new WebSocketServer({ server: httpServer });
 
 webSocketServer.on("connection", (socket) => {
   const id = crypto.randomUUID();
