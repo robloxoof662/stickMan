@@ -20,13 +20,13 @@ npm install
 npm run dev
 ```
 
-电脑浏览器打开 `http://localhost:5173`。
+电脑浏览器打开 `http://localhost:5173`。Vite 开发服务器会自动热更新；保存前端代码后，电脑浏览器和同一 Wi-Fi 下的 iPad Safari 都会刷新/替换页面内容。
 
 在同一 Wi-Fi 下用 iPad 测试：
 
 1. 在 Mac 上运行 `npm run dev`。
 2. 查询 Mac 的局域网 IP，例如 `192.168.1.20`。
-3. 在 iPad Safari 打开 `http://192.168.1.20:5173`。
+3. 在 iPad Safari 打开 `http://192.168.1.20:5173`。如果看不到自动更新，先确认 iPad 打开的就是电脑局域网 IP 的 `5173` 端口，并刷新一次页面以重新连接 Vite 热更新通道。
 4. 再打开一个浏览器窗口或另一台设备，就能测试双人状态同步。
 
 如果 macOS 防火墙询问是否允许 Node 接受连接，请选择允许。

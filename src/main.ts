@@ -2,6 +2,9 @@ import "./styles.css";
 import { ArenaView } from "./three/ArenaView.ts";
 import { TouchControls } from "./ui/TouchControls.ts";
 import { GameClient } from "./network/GameClient.ts";
+import { installViewportGuards } from "./ui/ViewportGuards.ts";
+
+installViewportGuards();
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <main class="game-shell">
