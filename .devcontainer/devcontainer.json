@@ -1,0 +1,22 @@
+{
+  "name": "StickMan iPad Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "postCreateCommand": "npm ci",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "StickMan 实时预览",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 600,
+        "editor.formatOnSave": true,
+        "workbench.startupEditor": "readme"
+      }
+    }
+  }
+}
