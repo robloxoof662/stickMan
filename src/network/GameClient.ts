@@ -31,9 +31,7 @@ export class GameClient {
 
     const configuredUrl = import.meta.env.VITE_WS_URL?.trim();
     const protocol = location.protocol === "https:" ? "wss:" : "ws:";
-    const developmentUrl = `${protocol}//${location.hostname}:8787`;
-    const productionUrl = `${protocol}//${location.host}`;
-    const url = configuredUrl || (import.meta.env.DEV ? developmentUrl : productionUrl);
+    const url = configuredUrl || `${protocol}//${location.host}/ws`;
     this.socket = new WebSocket(url);
 
     this.socket.addEventListener("open", () => {

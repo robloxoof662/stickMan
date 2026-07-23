@@ -11,6 +11,35 @@
 - PWA 基础配置，可从 Safari 添加到主屏幕
 - 服务端规则单元测试和 GitHub Actions CI
 
+## 在 iPad 上开发并实时预览
+
+推荐使用 GitHub Codespaces。它会在云端运行 Node.js、Vite 和游戏服务器；iPad 只负责显示网页版 VS Code 和游戏预览，因此不需要在 iPad 本机安装 Node.js。
+
+### 第一次打开
+
+1. 在 iPad Safari 登录 GitHub。
+2. 打开项目仓库 `https://github.com/robloxoof662/stickMan`。
+3. 点击 **Code** → **Codespaces** → **Create codespace on main**。
+4. 等待云端环境创建完成。项目依赖会自动安装。
+5. 在网页版 VS Code 中打开终端，运行：
+
+   ```bash
+   npm run dev
+   ```
+
+6. 端口 `5173` 启动后，GitHub 会自动打开 **StickMan 实时预览**。如果没有弹出，在底部 **PORTS** 面板中点击端口 `5173` 右侧的地球图标。
+
+### 日常开发方式
+
+- 一个 Safari 标签页打开 Codespaces 编辑器。
+- 另一个 Safari 标签页打开游戏预览。
+- 修改文件后会在 600 毫秒内自动保存，Vite 随后进行热更新。
+- 使用 iPad 分屏也可以把编辑器和预览并排放置。
+- 完成一段工作后，在 Codespaces 的 Source Control 面板提交并同步到 GitHub。
+- 停止使用时，在 GitHub Codespaces 页面停止 codespace，避免继续消耗额度。
+
+预览端口默认是私有的，只有登录当前 GitHub 账户后才能访问。若需要让第二台设备加入同一局测试，可在 **PORTS** 面板中把端口 `5173` 的可见性改为 Public，再将预览链接发给另一台设备；测试结束后改回 Private。
+
 ## 本地运行
 
 需要 Node.js 22 或更高版本。
@@ -38,7 +67,7 @@ npm run build
 npm start
 ```
 
-默认在 `http://localhost:8787` 同时提供网页和 WebSocket 服务。线上部署必须使用 HTTPS/WSS；可通过 `PORT` 环境变量修改端口，通过 `VITE_WS_URL` 指定独立的 WebSocket 地址。
+默认在 `http://localhost:8787` 同时提供网页和 `/ws` WebSocket 服务。线上部署必须使用 HTTPS/WSS；可通过 `PORT` 环境变量修改端口，通过 `VITE_WS_URL` 指定独立的 WebSocket 地址。
 
 ## 项目结构
 
