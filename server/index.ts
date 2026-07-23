@@ -10,7 +10,7 @@ const PORT = Number(process.env.PORT ?? 8787);
 const TICK_RATE = 30;
 const game = new Game();
 const clients = new Map<WebSocket, string>();
-const distDirectory = fileURLToPath(new URL("../dist", import.meta.url));
+const distDirectory = fileURLToPath(new URL("../dist/client", import.meta.url));
 
 const httpServer = createServer((request, response) => {
   if (process.env.NODE_ENV === "production") {

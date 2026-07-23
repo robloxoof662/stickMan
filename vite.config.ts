@@ -10,5 +10,6 @@ export default defineConfig({
   },
   build: {
     target: "safari15",
+    outDir: "dist/client",
   },
 });
